@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+    <script src="js/app.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="exercicio">
+        <h1>Exercício 1:</h1>
+        <h3>Crie um código javascript que lê um arquivo CSV com os dados abaixo e converta o conteúdo em JSON.</h3>
+        <h5>O arquivo example.csv está na base do projeto. Utilize ele.</h5>
+        <br>
+        <form id="csvForm">
+            <input type="file" id="csvFile">
+            <br>
+            <input type="submit" value="Enviar CSV" id="readCsv" class="input-button">
+        </form>
+        <br>
+        <pre id="codeResult"></pre>
+    </div>
+    <div class="exercicio">
+        <h1>Exercício 2:</h1>
+        <h3>Crie um código javascript que recebe como entrada um valor string e filtra o JSON da questão anterior pela cidade.</h3>
+        <h5>Para funcionar, você precisa ter enviado o CSV e recebido o JSON no exercício 1.</h5>
+        <br>
+        <form id="filterForm">
+            <input type="text" id="filterTerm" placeholder="Digite a cidade" class="input">
+            <br>
+            <input type="submit" value="Filtrar" id="filterButton" class="input-button">
+        </form>
+        <br>
+        <pre id="codeResultFiltered"></pre>
+    </div>
+    <div class="exercicio">
+        <h1>Exercício 3:</h1>
+        <h3>Crie um código javascript que recebe como entrada a coluna que o usuário quer ordenar e o sentido desejado (ASC ou DESC).</h3>
+        <h5>Para funcionar, você precisa ter enviado o CSV e recebido o JSON no exercício 1.</h5>
+        <br>
+        <form id="orderForm">
+            <select id="orderCollum" class="select">
+                <option value="">Selecione a coluna:</option>
+                <option value="nome">Nome</option>
+                <option value="idade">Idade</option>
+                <option value="cidade">Cidade</option>
+            </select>
+            <br>
+            <select id="orderValue" class="select">
+                <option value="">Selecione a ordenação:</option>
+                <option value="ASC">ASC</option>
+                <option value="DESC">DESC</option>
+            </select>
+            <br>
+            <input type="submit" value="Ordenar" id="OrderButton" class="input-button">
+        </form>
+        <br>
+        <pre id="codeResultSorted"></pre>
+    </div>
+    <div class="exercicio">
+        <h1>Exercício 4:</h1>
+        <h3>Crie um código javascript que preencha um array com 100 números aleatórios e ao final, aplique um filtro fazendo com que o array fique apenas com as posições ímpares do array.</h3>
+        <button class="input-button" id="executarExercicio4">Executar exercício</button>
+        <br>
+        <pre id="arrayCompleto"></pre>
+        <pre id="arrayImpar"></pre>
+    </div>
+    <div class="exercicio">
+        <h1>Exercício 5:</h1>
+        <h3>Crie um código javascript que faça simulação de um financiamento, que todo mês acrescenta um percentual na dívida pendente de pagamento. O valor total do financiamento, valor que será pago mensalmente e percentual será passado pelo usuário. Em quantos meses irá quitar a dívida dela e qual será o valor total pago.</h3>
+        <form id="financiamentoForm">
+            <input type="number" placeholder="Valor total do financiamento" id="totalFinanciamento" class="input">
+            <br>
+            <input type="number" placeholder="Valor pago mensalmente" id="mensalFinanciamento" class="input">
+            <br>
+            <input type="number" placeholder="Percentual por mês" id="percentualFinanciamento" class="input">
+            <br>
+            <input type="submit" value="Calcular" id="financiamentoButton" class="input-button">
+        </form>
+        <br>
+        <pre id="financiamentoResult"></pre>
+    </div>
+</body>
+</html>

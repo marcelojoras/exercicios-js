@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-button {
+    background: #52cfff;
+    padding: 5px 20px;
+    border: 1px solid #5857e9;
+    margin-top: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-button:hover {
+    opacity: 0.8;
+}
+
+.exercicio {
+    border-bottom: 1px solid #000;
+}
+
+.input {
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.select {
+    margin-top: 15px;
+    padding: 5px 20px;
+}
