@@ -164,14 +164,25 @@ window.onload = function () {
 
     var totalPago = 0;
     var totalMeses = 0;
+    var erro = false;
 
     do {
-      total = (total + (total * percentual)) - mensal;
-      totalPago = totalPago + mensal;
-      totalMeses++;
+      if(total * percentual >= mensal) {
+        total = 0;
+        erro = true;
+      } else {
+        total = (total + (total * percentual)) - mensal;
+        totalPago = totalPago + mensal;
+        totalMeses++;
+      }
     } while(total > 0);
 
     var resultFinanciamento = document.getElementById('financiamentoResult');
-    resultFinanciamento.innerHTML = 'Total pago: ' + totalPago + '<br>Total de meses: ' + totalMeses;
+
+    if(erro) {
+      resultFinanciamento.innerHTML = '<span style="color: red;">O valor pago mensalmente não é suficiente para cobrir os juros do financiamento, ele deve ser maior.</span>';
+    } else {
+      resultFinanciamento.innerHTML = 'Total pago: ' + totalPago + '<br>Total de meses: ' + totalMeses;
+    }
   });
 }
